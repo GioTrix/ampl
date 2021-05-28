@@ -1,0 +1,28 @@
+set O:= x1, x2, x3;                                             # rappresenta le x
+set V:= r1, r2, r3;                                             # rappresenta le righe
+
+param c:=                                                       # assegnazione valori funzione obiettivo
+x1 -1
+x2 -3
+x3 1;
+
+param b:=                                                       # assegnazione valori termini noti
+r1 3
+r2 6
+r3 8;
+
+param a:                                                        # assegnazioni valori matrice
+    x1  x2  x3=
+r1  2   1   0    
+r2  1   1   3   
+r3  2   1   3;
+
+/*
+min z= - x1 - 3x2 + x3
+
+st. 2x1 + x2       <= 3
+     x1 + x2 + 3x3 <= 6 
+    2x1 + x2 + 3x3 <= 8
+
+    x1, x2, x3 >= 0
+*/
